@@ -22,10 +22,11 @@ class RestaurantTable extends Migration
             $table->string('address', 100);
             $table->string('contact', 100);
             $table->string('service_type',50);
-            $table->double('lat')->nullable();
-            $table->double('lon')->nullable();
             $table->smallInteger('capacity');
             $table->string('food_speciality', 20)->nullable();
+            $table->double('lat')->nullable();
+            $table->double('lon')->nullable();
+
 
             $table->timestamps();
         });
