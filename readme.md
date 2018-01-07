@@ -1,21 +1,28 @@
-# Lumen PHP Framework
+# Projeto - Engenharia de software
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+**Getting Started:**
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+$ composer update
 
-## Official Documentation
+Create .env file:
 
-Documentation for the framework can be found on the [Lumen website](http://lumen.laravel.com/docs).
+$ cat .env.example > .env
 
-## Security Vulnerabilities
+Editar o nome, user name e password da base de dados se necessário.
+Migração e seeder vai encher a base de dados com dados fasos.
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+Criar a base de dados:
 
-## License
+mysql> CREATE DATABASE restaurantapi;
 
-The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Correr artisan migrate com seed:
+$ php artisan migrate --seed
+
+* Ficheiro das Rotas disponivel em :
+    - ficheiro - routes.md;
+
+1. **Desenvolver um WS1 (Web Service):** 
+	
+
+2. **Desenvolver um WS2 (Web Service):** 
+	
