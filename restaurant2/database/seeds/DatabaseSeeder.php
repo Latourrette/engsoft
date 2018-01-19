@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
             RestaurantsTableSeeder::class,
             MenusTableSeeder::class,
             SchedulesTableSeeder::class,
+            ReservationsTableSeeder::class,
         ]);
     }
 }

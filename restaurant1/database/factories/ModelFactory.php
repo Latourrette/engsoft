@@ -42,4 +42,13 @@ $factory->define(App\Schedule::class, function () {
     ];
 });
 
+$factory->define(App\Reservation::class, function (Faker\Generator $faker) {
+    return [
+        'time_reserved' => $faker->dateTimeBetween('0800', 'now'),
+        'number_people' => $faker->numberBetween(1, 10),
+        'restaurant_id' => 1,
+    ];
+});
+
+
 

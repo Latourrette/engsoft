@@ -21,7 +21,7 @@ class RestaurantsTable extends Migration
             $table->string('name', 50);
             $table->string('address', 100);
             $table->string('contact', 100);
-            $table->string('service_type', 50);
+            $table->string('service_type',50);
             $table->smallInteger('capacity');
             $table->string('food_speciality', 20)->nullable();
             $table->double('lat')->nullable();

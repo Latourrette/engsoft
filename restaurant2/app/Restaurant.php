@@ -55,5 +55,15 @@ class Restaurant extends Model
         return $this->hasOne(Schedule::class, 'restaurant_id', 'id');
     }
 
+    /**
+     * A restaurant has many reservations
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function reservation()
+    {
+        return $this->hasMany(Reservation::class, 'restaurant_id', 'id');
+    }
+
 
 }

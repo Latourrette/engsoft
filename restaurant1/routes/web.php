@@ -23,3 +23,14 @@ $router->group(['prefix' => 'menu'], function () use ($router) {
     $router->put('{id}', 'MenuController@updateMenu');
     $router->delete('{id}', 'MenuController@deleteMenu');
 });
+
+
+$router->group(['prefix' => 'reservation'], function () use ($router) {
+
+
+    $router->get('/', 'ReservationController@index');
+    $router->get('{id}', 'ReservationController@getReservation');
+    $router->post('/', 'ReservationController@createReservation');
+    $router->put('{id}', 'ReservationController@updateReservation');
+    $router->delete('{id}', 'ReservationController@deleteReservation');
+});

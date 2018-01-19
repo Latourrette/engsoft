@@ -41,3 +41,40 @@ URL: /menu/{id}
 `DELETE`
 `App\Http\Controllers\MenuController@deleteMenu`
 #
+URL: /reservation/
+
+`GET`
+`App\Http\Controllers\ReservationController@index`
+#
+URL: /reservation/{id}
+
+`GET`
+`App\Http\Controllers\ReservationController@getReservation`
+#
+URL: /reservation
+
+`POST`
+`App\Http\Controllers\ReservationController@createReservation`
+
+Key | Value
+-------- | ---
+time_reserved | requerido, Date
+number_people | requerido, smallint
+restaurant_id | int
+#
+URL: /reservation/{id}
+
+`PUT`
+`App\Http\Controllers\ReservationController@updateReservation`
+
+Key | Value
+-------- | ---
+time_reserved | requerido, Date
+number_people | requerido, smallint
+restaurant_id | int
+#
+URL: /reservation/{id}
+
+`DELETE`
+`App\Http\Controllers\ReservationController@deleteReservation`
+#

@@ -95,7 +95,7 @@ class MenuController extends Controller
     }
 
     /**
-     * Updates a Schedule
+     * Updates a Menu
      *
      * @param Request $request
      * @param $id

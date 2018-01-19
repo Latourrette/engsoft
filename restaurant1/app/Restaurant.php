@@ -23,7 +23,7 @@ class Restaurant extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'address', 'contact', 'service_type', 'capacity', 'food_speciality', 'lat', 'lon'
+            'name', 'address', 'contact', 'service_type', 'capacity', 'food_speciality', 'lat', 'lon'
     ];
 
     /**
@@ -55,5 +55,14 @@ class Restaurant extends Model
         return $this->hasOne(Schedule::class, 'restaurant_id', 'id');
     }
 
+    /**
+     * A restaurant has many reservations
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function reservation()
+    {
+        return $this->hasMany(Reservation::class, 'restaurant_id', 'id');
+    }
 
 }
