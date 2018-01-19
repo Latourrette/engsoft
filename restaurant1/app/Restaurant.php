@@ -16,7 +16,7 @@ class Restaurant extends Model
      *
      * @var string
      */
-    protected $table = 'restaurant';
+    protected $table = 'restaurants';
     /**
      * The attributes that are mass assignable.
      *
@@ -42,7 +42,7 @@ class Restaurant extends Model
      */
     public function menu()
     {
-        return $this->hasMany(Menu::class,'restaurant_id','id');
+        return $this->hasMany(Menu::class, 'restaurant_id', 'id');
     }
 
     /**
@@ -52,7 +52,7 @@ class Restaurant extends Model
      */
     public function schedule()
     {
-        return $this->hasOne(Schedule::class ,'restaurant_id','id');
+        return $this->hasOne(Schedule::class, 'restaurant_id', 'id');
     }
 
 

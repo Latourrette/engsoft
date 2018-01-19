@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
  * Class Menu
  * @package App
  */
-class Menu extends Model
+class Schedule extends Model
 {
 
     /**
@@ -16,14 +16,14 @@ class Menu extends Model
      *
      * @var string
      */
-    protected $table = 'menus';
+    protected $table = 'schedules';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'price', 'restaurant_id'
+        'weekday_open', 'weekday_close', 'weekend_open', 'weekend_close',
     ];
 
     /**
@@ -32,11 +32,11 @@ class Menu extends Model
      * @var array
      */
     protected $hidden = [
-        'id', 'created_at', 'updated_at'
+        'id', 'created_at', 'updated_at', 'restaurant_id',
     ];
 
     /**
-     * A menu has one restaurant
+     * A Schedule has one restaurant
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */

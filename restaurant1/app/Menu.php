@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
  * Class Menu
  * @package App
  */
-class Schedule extends Model
+class Menu extends Model
 {
 
     /**
@@ -23,7 +23,7 @@ class Schedule extends Model
      * @var array
      */
     protected $fillable = [
-        'weekday_open', 'weekday_close', 'weekend_open', 'weekend_close', 'restaurant_id'
+        'name', 'price',
     ];
 
     /**
@@ -32,11 +32,11 @@ class Schedule extends Model
      * @var array
      */
     protected $hidden = [
-        'id', 'created_at', 'updated_at'
+        'created_at', 'updated_at', 'restaurant_id',
     ];
 
     /**
-     * A Schedule has one restaurant
+     * A menu has one restaurant
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */

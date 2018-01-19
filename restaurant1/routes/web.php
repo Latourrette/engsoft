@@ -11,6 +11,15 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+$router->get('/', 'RestaurantController@index');
+
+
+$router->group(['prefix' => 'menu'], function () use ($router) {
+
+
+    $router->get('/', 'MenuController@index');
+    $router->get('{id}', 'MenuController@getMenu');
+    $router->post('/', 'MenuController@createMenu');
+    $router->put('{id}', 'MenuController@updateMenu');
+    $router->delete('{id}', 'MenuController@deleteMenu');
 });

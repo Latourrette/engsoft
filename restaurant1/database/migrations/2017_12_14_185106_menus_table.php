@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ScheduleTable extends Migration
+class MenusTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,15 @@ class ScheduleTable extends Migration
      */
     public function up()
     {
-        Schema::create('schedules', function (Blueprint $table) {
+        /**
+         * create menus table
+         */
+        Schema::create('menus', function (Blueprint $table) {
             $table->increments('id');
-            $table->time('weekday_open');
-            $table->time('weekday_close');
-            $table->time('weekend_open');
-            $table->time('weekend_close');
+            $table->string('name');
+            $table->float('price');
             $table->integer('restaurant_id')->unsigned()->nullable();
-            $table->foreign('restaurant_id')->references('id')->on('restaurant')->onDelete('cascade');
+            $table->foreign('restaurant_id')->references('id')->on('restaurants')->onDelete('cascade');
 
             $table->timestamps();
         });
@@ -33,7 +34,7 @@ class ScheduleTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('schedules');
+        Schema::dropIfExists('menus');
 
     }
 }

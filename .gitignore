@@ -1,4 +1,13 @@
-/vendor
 /.idea
-/.env
-/.directory
+
+/restaurant1/vendor
+/restaurant1/.env
+/restaurant1/.directory
+
+/restaurant2/vendor
+/restaurant2/.env
+/restaurant2/.directory
+
+/restaurant3/vendor
+/restaurant3/.env
+/restaurant3/.directory
