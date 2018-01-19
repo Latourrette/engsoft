@@ -6,7 +6,6 @@ Install the composer dependencies
     
     composer install
     
-      
 
 Create .env file:
 
