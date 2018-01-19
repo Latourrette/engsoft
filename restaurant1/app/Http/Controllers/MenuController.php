@@ -70,7 +70,7 @@ class MenuController extends Controller
     }
 
     /**
-     * Deletes a Schedule
+     * Deletes a Menu
      *
      * @param $id
      * @return \Illuminate\Http\JsonResponse
