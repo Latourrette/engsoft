@@ -11,10 +11,6 @@ Create .env file:
 
     $ cat .env.example > .env
 
-Set application key
-    
-    php artisan key:generate  
-
 Create BD:
 
     mysql> CREATE DATABASE "nome";
