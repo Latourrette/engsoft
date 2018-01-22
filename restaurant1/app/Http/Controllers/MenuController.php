@@ -115,6 +115,7 @@ class MenuController extends Controller
         $menu->name = $request->input('name');
         $menu->price = $request->input('price');
 
+
         $menu->save();
 
         return response()->json($menu);

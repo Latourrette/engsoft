@@ -23,7 +23,7 @@ class Menu extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'price',
+        'name', 'price', "restaurant_id"
     ];
 
     /**
@@ -32,7 +32,7 @@ class Menu extends Model
      * @var array
      */
     protected $hidden = [
-        'created_at', 'updated_at', 'restaurant_id',
+        'created_at', 'updated_at',
     ];
 
     /**

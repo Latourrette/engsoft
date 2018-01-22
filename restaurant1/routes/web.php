@@ -13,6 +13,11 @@
 
 $router->get('/', 'RestaurantController@index');
 
+$router->group(['prefix' => 'restaurant'], function () use ($router) {
+    $router->get('/', 'RestaurantController@index');
+    $router->put('{id}', 'RestaurantController@updateRestaurant');
+});
+
 
 $router->group(['prefix' => 'menu'], function () use ($router) {
 

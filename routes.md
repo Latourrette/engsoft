@@ -1,8 +1,20 @@
 #
 URL: /
-
+get
 `GET`
 `App\Http\Controllers\RestaurantController@index`
+#
+
+`PUT`
+`App\Http\Controllers\RestaurantController@updateRestaurant`
+
+Key | Value
+-------- | ---
+name | requerido, string
+address | requerido, string
+service_type | requerido, string
+capacity | requerido, smallint
+food_speciality | requerido, string
 #
 URL: /menu/
 

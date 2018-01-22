@@ -67,21 +67,35 @@ class ForkController extends Controller
      */
     public function deleteRestaurant($id)
     {
-        $fork = $this->fork->find($id);
+        $forks = $this->fork->find($id);
 
-        if ($fork == null) {
+        if ($forks == null) {
             return response()->json([
                 'status' => 404,
                 'message' => 'Menu not found!'
             ]);
         }
 
-        $fork->delete();
+        $forks->delete();
 
         return response()->json([
             'status' => 200,
             'message' => 'Menu removed with success!',
         ]);
+    }
+
+    public function filterByFood($filter)
+    {
+
+        $forks = $this->fork->all();
+        $restaurant = [];
+        foreach ($forks as $fork) {
+            $restaurant[] = json_decode(file_get_contents($fork->restaurant));
+            if (in_array($filter, $restaurant )) {
+                return response()->json($restaurant);
+
+            }
+        }
     }
 
 

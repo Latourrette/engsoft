@@ -12,7 +12,7 @@
 */
 
 $router->get('/', 'ForkController@index');
-$router->get('/food/{filter}', 'ForkController@indexMenus');
+$router->get('/food/{filter}', 'ForkController@filterByFood');
 
 
 $router->group(['prefix' => '/'], function () use ($router) {

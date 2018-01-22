@@ -61,7 +61,7 @@ class ReservationController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */
-    public function createMenu(Request $request)
+    public function createReservation(Request $request)
     {
         $reservation = $this->reservation->create($request->all());
 
@@ -74,7 +74,7 @@ class ReservationController extends Controller
      * @param $id
      * @return \Illuminate\Http\JsonResponse
      */
-    public function deleteMenu($id)
+    public function deleteReservation($id)
     {
         $reservation = $this->reservation->find($id);
 
@@ -100,7 +100,7 @@ class ReservationController extends Controller
      * @param $id
      * @return \Illuminate\Http\JsonResponse
      */
-    public function updateMenu(Request $request, $id)
+    public function updateReservation(Request $request, $id)
     {
         $reservation = $this->reservation->find($id);
 
